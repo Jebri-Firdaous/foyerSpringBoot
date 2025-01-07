@@ -21,5 +21,10 @@ public class Foyer {
     private String nomFoyer;
     private Long capaciteFoyer;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="foyer", fetch = FetchType.EAGER)
+    private Set<Bloc> listBloc;
+
+    @OneToOne(mappedBy = "foyer" , cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    private Universite universite;
 
 }

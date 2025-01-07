@@ -23,6 +23,11 @@ public class Reservation {
 
     private boolean estValide;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    private Set<Etudiant>etudiants;
 
+    @ManyToOne
+    @JoinColumn(name = "chambre_id")
+    private Chambre chambre ;
 
 }

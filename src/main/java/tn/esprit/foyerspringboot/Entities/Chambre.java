@@ -21,6 +21,14 @@ public class Chambre {
     private Long idChambre;
 
     private Long numeroChambre;
+    @Enumerated(EnumType.STRING)
+    private TypeChambre typeChambre;
 
+    @ManyToOne
+    @JoinColumn(name = "bloc_id" )
+    private Bloc bloc;
+
+    @OneToMany(mappedBy ="chambre" , fetch = FetchType.EAGER)
+    private Set<Reservation> reservations;
 
 }
