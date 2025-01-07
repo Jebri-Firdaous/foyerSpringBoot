@@ -1,4 +1,4 @@
-package tn.esprit.foyerspringboot;
+package tn.esprit.foyerSpringBoot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
